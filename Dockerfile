@@ -43,6 +43,7 @@ RUN mv /elasticsearch* /elasticsearch
 #HBase
 RUN wget -O - http://archive.apache.org/dist/hbase/hbase-1.0.0/hbase-1.0.0-bin.tar.gz  | tar zx
 RUN mv /hbase* /hbase
+RUN mkdir -p /hbase/conf/
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /hbase/conf/hbase-env.sh 
 
 #Python SDK
